@@ -1,0 +1,46 @@
+import datetime
+import tkinter as tk
+
+# Funktion zur Berechnung des Alters
+def calculate_age():
+    birthdate_str = birthdate_entry.get()  # Lesen des eingegebenen Geburtsdatums
+    birthdate = datetime.datetime.strptime(birthdate_str, "%d-%m-%Y")  # Umwandlung des Datums in ein datetime-Objekt
+    today = datetime.datetime.today()  # Aktuelles Datum und Uhrzeit
+    age = today - birthdate  # Berechnung des Alters
+    years = age.days // 365  # Jahre berechnen
+    months = (age.days % 365) // 30  # Monate berechnen
+    weeks = (age.days % 365) % 30 // 7  # Wochen berechnen
+    days = (age.days % 365) % 30 % 7  # Tage berechnen
+    hours = age.seconds // 3600  # Stunden berechnen
+    minutes = (age.seconds % 3600) // 60  # Minuten berechnen
+    seconds = age.seconds % 60  # Sekunden berechnen
+    result_label.config(text="Du bist {} Jahre, {} Monate, {} Wochen, {} Tage, {} Stunden, {} Minuten und {} Sekunden alt.".format(years, months, weeks, days, hours, minutes, seconds))  # Anzeige des Ergebnisses im Label
+
+# Funktion zum Beenden des Programms
+def quit_program():
+    root.destroy()
+
+# Erstellung des Hauptfensters
+root = tk.Tk()
+root.title("Alter berechnen")
+
+# Eingabefeld für das Geburtsdatum
+birthdate_label = tk.Label(root, text="Gebe dein Geburtsdatum mit Bindestrichen ein: (TT-MM-JJJJ):")
+birthdate_label.pack()
+birthdate_entry = tk.Entry(root)
+birthdate_entry.pack()
+
+# Button zum Berechnen des Alters
+calculate_button = tk.Button(root, text="Alter berechnen", command=calculate_age)
+calculate_button.pack()
+
+# Anzeige des Ergebnisses
+result_label = tk.Label(root, text="")
+result_label.pack()
+
+# Button zum Beenden des Programms
+quit_button = tk.Button(root, text="Beenden", command=quit_program)
+quit_button.pack()
+
+# Starten des Hauptfensters
+root.mainloop()
