@@ -13,16 +13,25 @@ calculate_age.py
 ``` 
 ein, um das Skript auszuführen.
 
-##Verwendung
+## Verwendung
 Geben Sie das Geburtsdatum im Format "TT-MM-JJJJ" in das Eingabefeld ein.
 Klicken Sie auf den Button "Alter berechnen", um das Alter zu berechnen.
 Das Ergebnis wird im Textfeld unter dem Button angezeigt.
 
-##Beenden
+## Beenden
 Sie können das Programm beenden, indem Sie auf den "Beenden" Button klicken oder das Fenster schließen.
 
-##Abhängigkeiten
+## Abhängigkeiten
 Das Skript verwendet die Python-Module datetime und tkinter. Diese sollten in einer Standard-Python-Installation bereits enthalten sein. Wenn nicht, müssen sie installiert werden.
+
+Datetime :
+```
+pip install DateTime
+```
+Tkinter :
+```
+pip install tkintertable
+```
 
 # Lifetimer Age Calculator
 ##### English:
@@ -38,13 +47,22 @@ calculate_age.py
 ```
 to run the script.
 
-##Use
+## Use
 Enter the date of birth in the format "DD-MM-YYYY" in the input field.
 Click on the "Calculate Age" button to calculate the age.
 The result is displayed in the text field below the button.
 
-##End
+## End
 You can exit the program by clicking the "Exit" button or by closing the window.
 
-##dependencies
+## Dependencies
 The script uses the Python modules datetime and tkinter. These should already be included in a standard Python installation. If not, they need to be installed.
+
+Datetime :
+```
+pip install DateTime
+```
+Tkinter :
+```
+pip install tkintertable
+```
